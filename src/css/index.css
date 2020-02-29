@@ -1,0 +1,67 @@
+.bg-home{
+    background-image: url("../assets/img/bg-home.jpg");
+    background-size: cover;
+    height: 80vh;
+}
+
+.bg-opacity {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    height: 80vh;
+    width: 100%;
+    z-index: 10;
+    top: 70px;
+    color: white;
+}
+
+.logo-4ltrophy img {
+    width:80px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.subtitle{
+    margin-top: 35vh;
+}
+
+.border-left{
+    position: absolute;
+    left: 30vw;
+    top:30vh;
+    width: 50px;
+    height: 80px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+}
+
+.border-right{
+    position: absolute;
+    right: 30vw;
+    top: 40vh;
+    width: 100px;
+    height: 45px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+}
+
+.subtitle h1 {
+    text-transform: uppercase;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: #EFEFEF;
+    padding: 16px;
+}
+
+.menu p {
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.icon-menu {
+    width: 30px;
+    height: 30px;
+}
