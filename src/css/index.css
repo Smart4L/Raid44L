@@ -14,8 +14,8 @@
     color: white;
 }
 
-.logo-4ltrophy img {
-    width:80px;
+.trophy {
+    width:130px;
     position: absolute;
     right: 20px;
     top: 20px;
@@ -65,3 +65,112 @@
     width: 30px;
     height: 30px;
 }
+
+.bg-orange{
+    background-color: #ffb000;
+    padding: 100px 80px;
+    display: flex;
+}
+
+.presentation{
+    width: 40%;
+    padding: 100px 20px;
+    text-align: right;
+    position: relative;
+}
+
+.presentation h2 {
+    font-family: "4L";
+}
+
+.car-icon {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.presentation .top {
+    display: flex;
+    justify-content: right;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+hr{
+    margin-top: 50px;
+    width: 200px;
+    position: absolute;
+    right: 20px;
+}
+
+.transition {
+    display: flex;
+}
+
+.bg-grey{
+    background-color: #EFEFEF;
+    text-align: center;
+    width: 100%;
+    font-family: "4L";
+    padding:60px;
+    font-size: 25px;
+}
+
+.raid{
+    display: flex;
+}
+
+.race {
+    padding: 40px;
+    width: 50%;
+    text-align: center;
+    background-color: #EFEFEF;
+}
+
+.race .top{
+    display: flex;
+    justify-content: center;
+}
+
+.race .top .icon{
+    width: 50px;
+    height: 50px;
+}
+
+.race .center p {
+    font-family: "Raleway";
+    text-align: right;
+}
+
+.race .center p:first-child{
+    margin: 50px 0;
+}
+
+.race .center h3 {
+    margin-top: 20px;
+    font-family: "4L";
+    text-align: right;
+}
+
+.raid img {
+    width: 51%;
+}
+
+.race .bottom{
+    text-align: center;
+    border: 2px solid #ffb000;
+    width: 200px;
+    padding: 10px;
+    margin: 50px auto;
+}
+
+.race .bottom h3 {
+    margin-top: 20px;
+    font-family: "4L";
+    text-align: center;
+}
+

@@ -9,8 +9,8 @@ export default class Home extends React.Component {
         return(
             <div>
                 <div className="bg-opacity">
-                    <div className="logo-4ltrophy">
-                        <img src="/logo-4ltrophy.png" alt="4L Trophy"/>
+                    <div>
+                        <img className="trophy" src="/logo-4ltrophy.png" alt="4L Trophy"/>
                     </div>
                     <div className="subtitle">
                         <div className="border-left"></div>
@@ -32,6 +32,52 @@ export default class Home extends React.Component {
                         <img className="icon-menu" src="helmet.png" alt="casque"/>
                         <p>Pilotes</p>
                     </div>
+                </div>
+                <div className="bg-orange">
+                    <div className="presentation">
+                        <div className="top">
+                            <img className="icon" src="/car.png" alt=""/>
+                            <h2>Raid 44L</h2>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Vivamusviverra sem vel enim ultrices, non auctor tellus dictum.
+                            Morbi torto elit, fringilla nec nisi et, egestas aliquam massa.
+                            Cras vulputate pellentesque tincidunt. In dapibus, arcu id semper commodo,
+                            orci nisl ultrices metus, ac convallis massa urna a eros.  In nec ligula id arcu condimentum feugiat.
+                            Sed fermentum sed porta vestibulum, porta sit amet est.
+                            Nulla tincidunt maximus pretium. Nulla sollicitudin vitaeante eu venenatis.</p>
+                        <hr/>
+                    </div>
+                    <img className="car-icon" src="/logo-Raid-44L-black.png" alt=""/>
+                </div>
+                <div className="transition">
+                    <img src="/illustration.jpg" alt="renault 4L"/>
+                    <div className="bg-grey">
+                        <h3>"Une expérience unique"</h3>
+                    </div>
+                </div>
+                <div className="raid">
+                    <div className="race">
+                        <div className="top">
+                            <img className="icon" src="/racing-flag.png" alt=""/>
+                            <h2>Le 4L Trophy</h2>
+                        </div>
+                        <div className="center">
+                            <p>Créé en 1997 le 4L Trophy est le plus grand raid humanitaire d’Europe, ouvert uniquement aux jeunes de 18 à 28 ans. A bord d’une des plus iconiques voiture des années 2000, la Renault 4L.
+                                Le raid du 4L Trophy est une course d’orientation où l’entraide et la capacité de navigation de chaque participant sera mis à l’épreuve. </p>
+                            <h3>Du 18 au 28 février 2021</h3>
+                            <p>Le début de l’aventure se déroule en France, à Biarritz.
+                                A bord des magnifiques 4L il faudra atteindre le détroit de Gibraltar avant d’entamer un parcours dans le désert, nous irons à Marrakech pour un total de plus 6000km. </p>
+                            <h3>Objectifs</h3>
+                            <p>Lors de ce Raid, les objectifs sont multiples. La participation à une association humanitaire. L’envie de participer à notre échelle et nos moyens une population locale. Notre but est de suscité de l’engouement pour ce projet et les valeurs qu’il transporte.
+                                Le défi est également sportif, la préparation de la 4L, son entretien et les réparations durant la course.</p>
+                        </div>
+                        <div className="bottom">
+                            <h3>En résumé</h3>
+                            <p>1 course<br/>3000 participants<br/>20 000 enfants aidés</p>
+                        </div>
+                    </div>
+                    <img src="/map.png" alt=""/>
                 </div>
             </div>
         )
