@@ -100,7 +100,7 @@
     margin-top: 10px;
 }
 
-hr{
+.presentation hr{
     margin-top: 50px;
     width: 200px;
     position: absolute;
@@ -172,5 +172,74 @@ hr{
     margin-top: 20px;
     font-family: "4L";
     text-align: center;
+}
+
+.pilotes {
+    background-color: #ffb000;
+}
+
+.pilotes h2{
+    margin: 0 auto 10px;
+}
+
+.pilotes .container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.p1,
+.p2 {
+    border : 1px solid black;
+    width: 500px;
+    margin: 20px;
+    padding: 50px 20px 30px;
+    border-radius: 3px;
+}
+
+.p1 h3,
+.p2 h3 {
+    font-family: "4L";
+}
+
+.p1 img{
+    width: 100px;
+    position: absolute;
+    top: -35px;
+    left: 310px;
+    border-radius: 5px;
+}
+
+.p2 img {
+    width: 100px;
+    position: absolute;
+    top: -35px;
+    right: 310px;
+    border-radius: 5px;
+}
+
+.pilotes .top {
+    position: relative;
+}
+
+.border-top {
+    width: 50px;
+    height: 30px;
+    border-top:1px solid black;
+    border-left:1px solid black;
+    position: absolute;
+    left: 550px;
+    top: 30px;
+}
+
+.border-bottom {
+    width: 50px;
+    height: 30px;
+    border-bottom:1px solid black;
+    border-right:1px solid black;
+    position: absolute;
+    right: 550px;
+    bottom: -20px;
 }
 

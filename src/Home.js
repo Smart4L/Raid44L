@@ -79,6 +79,30 @@ export default class Home extends React.Component {
                     </div>
                     <img src="/map.png" alt=""/>
                 </div>
+                <div className="pilotes">
+                    <div className="top">
+                        <img className="icon" src="/helmet.png" alt=""/>
+                        <div className="border-top"></div>
+                        <h2>Les pilotes de la 404L</h2>
+                        <div className="border-bottom"></div>
+                    </div>
+                    <div className="container">
+                        <div className="p1">
+                            <img src="jp.png" alt=""/>
+                            <h3>Jules Peguet</h3>
+                            <p>21 ans<br/>Etudiant en 3ème année à l’EPSI Nantes.<br/>
+                                En alternance chez Sopra Steria.<br/>
+                                Passionné de Mécanique</p>
+                        </div>
+                        <div className="p2">
+                            <img src="jp.png" alt=""/>
+                            <h3>Clément Baranger</h3>
+                            <p>21 ans<br/>Etudiant en 3ème année à l’EPSI Nantes.<br/>
+                                En alternance chez Dassault Système.<br/>
+                                Patient, sens de l’orientation </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }
