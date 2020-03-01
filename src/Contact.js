@@ -39,7 +39,7 @@ export default class Contact extends React.Component {
                    <form>
                        {successBar}
                        <div>
-                           <label htmlFor="first_name">Prénom</label>
+                           <label htmlFor="first_name">Prénom *</label>
                            <input
                                type="text"
                                id="first_name"
@@ -49,7 +49,7 @@ export default class Contact extends React.Component {
                                value={this.state.first_name}
                                style={{width: '60%', height: '5px'}}
                            />
-                           <label htmlFor="last_name">Nom</label>
+                           <label htmlFor="last_name">Nom *</label>
                            <input
                                type="text"
                                id="last_name"
@@ -65,11 +65,10 @@ export default class Contact extends React.Component {
                                id="company"
                                name="company"
                                onChange={this.handleChangeCompany}
-                               required
                                value={this.state.company}
                                style={{width: '60%', height: '5px'}}
                            />
-                           <label htmlFor="email">Email</label>
+                           <label htmlFor="email">Email *</label>
                            <input
                                type="email"
                                id="email"
@@ -79,7 +78,7 @@ export default class Contact extends React.Component {
                                value={this.state.email}
                                style={{width: '60%', height: '5px'}}
                            />
-                           <label htmlFor="message">Votre message</label>
+                           <label htmlFor="message">Votre message *</label>
                            <textarea
                                id="message"
                                name="message"

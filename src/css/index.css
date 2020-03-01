@@ -86,6 +86,7 @@
 .car-icon {
     width: 500px;
     margin: 0 auto;
+    height: 100%;
 }
 
 .presentation .top {
@@ -109,14 +110,20 @@
 
 .transition {
     display: flex;
+    width: 100%;
+}
+
+.transition img{
+    width: 719px;
+    height: 100%;
 }
 
 .bg-grey{
     background-color: #EFEFEF;
     text-align: center;
-    width: 100%;
+    width: 50%;
     font-family: "4L";
-    padding:60px;
+    padding: 45px 0;
     font-size: 25px;
 }
 
@@ -126,7 +133,7 @@
 
 .race {
     height: auto;
-    padding: 40px;
+    padding: 38px;
     width: 50%;
     text-align: center;
     background-color: #EFEFEF;
@@ -158,16 +165,18 @@
 }
 
 .raid img {
-    width: 51%;
-    height: auto;
+    width: 50%;
+    height: 100%;
 }
 
 .race .bottom{
     text-align: center;
     border: 2px solid #ffb000;
-    width: 200px;
-    padding: 10px;
-    margin: 50px auto;
+    padding-bottom: 20px;
+}
+
+.race .bottom p {
+    display: inline;
 }
 
 .race .bottom h3 {

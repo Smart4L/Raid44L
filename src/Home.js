@@ -53,7 +53,7 @@ export default class Home extends React.Component {
                 <div className="transition">
                     <img src="/illustration.jpg" alt="renault 4L"/>
                     <div className="bg-grey">
-                        <h3>"Une expérience unique"</h3>
+                        <h3>" Une expérience unique "</h3>
                     </div>
                 </div>
                 <div className="raid">
@@ -74,7 +74,7 @@ export default class Home extends React.Component {
                         </div>
                         <div className="bottom">
                             <h3>En résumé</h3>
-                            <p>1 course<br/>3000 participants<br/>20 000 enfants aidés</p>
+                            <p>1 course - 3000 participants - 20 000 enfants aidés</p>
                         </div>
                     </div>
                     <img src="/map.png" alt="" className="map"/>
