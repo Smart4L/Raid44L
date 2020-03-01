@@ -5,9 +5,9 @@ export default class Contact extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            first_name:'',
+            first_name: '',
             last_name: '',
-            company:'',
+            company: '',
             email: '',
             content: '',
             success: false,
@@ -16,6 +16,7 @@ export default class Contact extends React.Component {
         this.handleChangeLastName = this.handleChangeLastName.bind(this);
         this.handleChangeEmail = this.handleChangeEmail.bind(this);
         this.handleChangeContent = this.handleChangeContent.bind(this);
+        this.handleChangeCompany = this.handleChangeCompany.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
