@@ -125,6 +125,7 @@
 }
 
 .race {
+    height: auto;
     padding: 40px;
     width: 50%;
     text-align: center;
@@ -158,6 +159,7 @@
 
 .raid img {
     width: 51%;
+    height: auto;
 }
 
 .race .bottom{

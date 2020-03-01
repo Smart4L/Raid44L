@@ -77,7 +77,7 @@ export default class Home extends React.Component {
                             <p>1 course<br/>3000 participants<br/>20 000 enfants aidés</p>
                         </div>
                     </div>
-                    <img src="/map.png" alt=""/>
+                    <img src="/map.png" alt="" className="map"/>
                 </div>
                 <div className="pilotes">
                     <div className="top">
