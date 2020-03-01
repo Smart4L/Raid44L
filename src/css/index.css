@@ -114,7 +114,7 @@
 }
 
 .transition img{
-    width: 719px;
+    width: 50%;
     height: 100%;
 }
 
@@ -133,7 +133,6 @@
 
 .race {
     height: auto;
-    padding: 38px;
     width: 50%;
     text-align: center;
     background-color: #EFEFEF;
@@ -152,16 +151,18 @@
 .race .center p {
     font-family: "Raleway";
     text-align: right;
+    padding: 10px 38px;
 }
 
 .race .center p:first-child{
-    margin: 50px 0;
+    margin: 40px 0;
 }
 
 .race .center h3 {
     margin-top: 20px;
     font-family: "4L";
     text-align: right;
+    padding-right: 38px;
 }
 
 .raid img {
@@ -172,7 +173,9 @@
 .race .bottom{
     text-align: center;
     border: 2px solid #ffb000;
-    padding-bottom: 20px;
+    padding: 10px;
+    width: 60%;
+    margin: 0 auto;
 }
 
 .race .bottom p {
