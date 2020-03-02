@@ -1,0 +1,107 @@
+.galerie{
+    background-color: black;
+}
+
+.big-video iframe{
+    width: 100%;
+    height: 600px;
+}
+
+.small-videos{
+    display: block;
+}
+
+.small-video{
+    width: 30%;
+    display: inline-block;
+    margin: 5px 5px;
+}
+
+.small-video img{
+    width: 100%;
+    height: auto;
+}
+
+.text-video{
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    height: 50px;
+}
+
+.date{
+    float: left;
+}
+
+.lieu{
+    float: right;
+}
+
+.bandeaux{
+    width: 100%;
+    height: 200px;
+    display: block;
+}
+
+.bandeaux-block{
+    margin-top: 40px;
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+}
+
+.button{
+    margin: 0 auto;
+    width: 20%;
+    background-color: #ffb000;
+    padding: 10px 20px;
+}
+
+.subtitle-galerie{
+    margin: 0 auto;
+    width: 40%;
+    color: white;
+}
+
+
+.border-top-galerie {
+    width: 50px;
+    height: 30px;
+    border-top:2px solid white;
+    border-left:2px solid white;
+    left: 550px;
+    top: 30px;
+}
+
+.border-bottom-galerie {
+    width: 50px;
+    height: 30px;
+    border-bottom:2px solid white;
+    border-right:2px solid white;
+    right: 550px;
+    float: right;
+    bottom: -20px;
+}
+
+.photos{
+    display: block;
+}
+
+.photo{
+    width: 400px;
+    height: 200px;
+    display: inline-block;
+    margin: 5px 5px;
+    background-color: #ffb000;
+    color: white;
+    vertical-align: top;
+    line-height: 190px;
+    font-size: 30px;
+    font-family: "4L", sans-serif;
+}
+
+.photo img{
+    width: 100%;
+    height: 100%;
+}
+
