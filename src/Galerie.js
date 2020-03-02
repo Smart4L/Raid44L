@@ -60,45 +60,57 @@ export default class Galerie extends React.Component {
                     </div>
                     <div className="photo">
                         <img src="/illustration-1.png"/>
+                        <div className="text">Le départ</div>
                     </div>
                     <div className="photo">
                         <img src="/illustration-1.png"/>
+                        <div className="text">Le départ</div>
+                    </div>
+                    <div className="photo">
+                        <img src="/illustration-1.png"/>
+                        <div className="text">Le départ</div>
                     </div>
                     <div className="photo">
                         se préparer
                     </div>
                     <div className="photo">
                         <img src="/illustration-1.png"/>
+                        <div className="text">Le départ</div>
                     </div>
                     <div className="photo">
                         <img src="/illustration-1.png"/>
+                        <div className="text">Le départ</div>
                     </div>
                     <div className="photo">
                         <img src="/illustration-1.png"/>
+                        <div className="text">Le départ</div>
                     </div>
                     <div className="photo">
                         <img src="/illustration-1.png"/>
+                        <div className="text">Le départ</div>
+                    </div>
+                    <div className="photo">
+                        <img src="/illustration-1.png"/>
+                        <div className="text">Le départ</div>
                     </div>
                     <div className="photo">
                         réparer
                     </div>
                     <div className="photo">
                         <img src="/illustration-1.png"/>
+                        <div className="text">Le départ</div>
                     </div>
                     <div className="photo">
                         <img src="/illustration-1.png"/>
+                        <div className="text">Le départ</div>
                     </div>
                     <div className="photo">
                         <img src="/illustration-1.png"/>
+                        <div className="text">Le départ</div>
                     </div>
                     <div className="photo">
                         <img src="/illustration-1.png"/>
-                    </div>
-                    <div className="photo">
-                        <img src="/illustration-1.png"/>
-                    </div>
-                    <div className="photo">
-                        <img src="/illustration-1.png"/>
+                        <div className="text">Le départ</div>
                     </div>
                     <div className="photo">
                         partager

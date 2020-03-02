@@ -30,7 +30,7 @@ export default class Contact extends React.Component {
                <div className="container-left">
                    <div className="bg_opacity">
                        <div className="border_left"></div>
-                       <h1 className="title-contact">Nous contacter</h1>
+                            <h1 className="title-contact">Nous contacter</h1>
                        <div className="border_right"></div>
                    </div>
                    <div className="illustration"></div>
