@@ -40,27 +40,33 @@
 .bandeaux{
     width: 100%;
     height: 200px;
-    display: block;
+    display: flex;
+    padding-top: 50px;
 }
 
 .bandeaux-block{
     margin-top: 40px;
-    width: 50%;
-    height: 100%;
+    /*width: 50%;*/
+    /*height: 100%;*/
     display: inline-block;
+    margin: 10px auto;
 }
 
 .button{
     margin: 0 auto;
-    width: 20%;
+    width: 80%;
     background-color: #ffb000;
     padding: 10px 20px;
 }
 
 .subtitle-galerie{
     margin: 0 auto;
-    width: 40%;
+    width: 100%;
     color: white;
+}
+
+.subtitle-galerie h1{
+    margin: 0;
 }
 
 
@@ -69,8 +75,9 @@
     height: 30px;
     border-top:2px solid white;
     border-left:2px solid white;
-    left: 550px;
-    top: 30px;
+    left: -20px;
+    top: 0px;
+    position: relative;
 }
 
 .border-bottom-galerie {
@@ -78,9 +85,10 @@
     height: 30px;
     border-bottom:2px solid white;
     border-right:2px solid white;
-    right: 550px;
+    right: -20px;
     float: right;
-    bottom: -20px;
+    bottom: -0px;
+    position: relative;
 }
 
 .photos{
