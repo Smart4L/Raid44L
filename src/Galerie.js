@@ -56,6 +56,7 @@ export default class Galerie extends React.Component {
                 <div className="photos">
                     <div className="photo">
                         <img src="/illustration-1.png"/>
+                        <div className="text">Le départ</div>
                     </div>
                     <div className="photo">
                         <img src="/illustration-1.png"/>

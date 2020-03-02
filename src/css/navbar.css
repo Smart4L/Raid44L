@@ -21,6 +21,10 @@
     color: #EC5A23;
 }
 
+.navbar__link--active {
+    border-bottom: 3px solid #EC5A23;
+}
+
 .logo-icon {
     width: 40px;
     position: absolute;

@@ -87,7 +87,7 @@
     border-right:2px solid white;
     right: -20px;
     float: right;
-    bottom: -0px;
+    bottom: 0px;
     position: relative;
 }
 
@@ -113,3 +113,29 @@
     height: 100%;
 }
 
+.photo img:hover{
+    cursor: zoom-in;
+    opacity: 0.3;
+}
+
+.text{
+    transition: .5s ease;
+    opacity: 0;
+    top: -70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    /*z-index: 100000;*/
+    color: #EFEFEF;
+    position: relative;
+    cursor: zoom-in;
+}
+
+.photo:hover img{
+    opacity: 0.3;
+}
+
+.photo:hover .text{
+    opacity: 1;
+}

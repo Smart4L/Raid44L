@@ -3,7 +3,7 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
+    Link, NavLink
 } from "react-router-dom";
 
 import Home from "./Home";
@@ -18,9 +18,9 @@ export default function Navbar() {
             <div class="navbar">
                 <div class="links">
                     <ul>
-                        <Link to="/"><li>Accueil</li></Link>
-                        <Link to="/galerie"><li>Galerie</li></Link>
-                        <Link to="/contact"><li>Contact</li></Link>
+                        <NavLink exact to="/" activeClassName="navbar__link--active"><li>Accueil</li></NavLink>
+                        <NavLink to="/galerie" activeClassName="navbar__link--active"><li>Galerie</li></NavLink>
+                        <NavLink to="/contact" activeClassName="navbar__link--active"><li>Contact</li></NavLink>
                     </ul>
                 </div>
                 <Switch>

@@ -257,3 +257,45 @@
     bottom: -20px;
 }
 
+.sponsors{
+    width: 100%;
+    height: auto;
+}
+
+.border-top-sponsor{
+    width: 50px;
+    height: 30px;
+    border-top:1px solid black;
+    border-left:1px solid black;
+    position: relative;
+    left: 550px;
+    top: 30px;
+}
+
+.border-bottom-sponsor{
+    width: 50px;
+    height: 30px;
+    border-bottom:1px solid black;
+    border-right:1px solid black;
+    position: relative;
+    right: 550px;
+    bottom: -20px;
+}
+
+.sponsor-img{
+    display: block;
+}
+
+.sponsor{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 50px;
+    line-height: 150px;
+}
+
+.sponsor img{
+    /*display: inline-block;*/
+    /*padding: 10px;*/
+    height: 100px;
+}

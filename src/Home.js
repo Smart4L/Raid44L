@@ -1,5 +1,6 @@
 import React from "react";
 import './css/home.css'
+import {Link} from "react-router-dom";
 
 export default class Home extends React.Component {
     constructor(props) {
@@ -89,17 +90,36 @@ export default class Home extends React.Component {
                     <div className="container">
                         <div className="p1">
                             <img src="jp.png" alt=""/>
-                            <h3>Jules Peguet</h3>
+                            <h3>Pilote : Jules Peguet</h3>
                             <p>21 ans<br/>Etudiant en 3ème année à l’EPSI Nantes.<br/>
                                 En alternance chez Sopra Steria.<br/>
                                 Passionné de Mécanique</p>
                         </div>
                         <div className="p2">
                             <img src="jp.png" alt=""/>
-                            <h3>Clément Baranger</h3>
+                            <h3>Co-Pilote : Clément Baranger</h3>
                             <p>21 ans<br/>Etudiant en 3ème année à l’EPSI Nantes.<br/>
                                 En alternance chez Dassault Système.<br/>
                                 Patient, sens de l’orientation </p>
+                        </div>
+                    </div>
+                </div>
+                <div className="sponsors">
+                    <div className="top">
+                        <img className="icon" src="/helmet.png" alt=""/>
+                        <div className="border-top-sponsor"></div>
+                        <h2>Les Sponsors</h2>
+                        <div className="border-bottom-sponsor"></div>
+                    </div>
+                    <div className="container">
+                        Serez-vous le prochain ? <Link to="/contact">Contactez-nous</Link>
+                        <div className="sponsor-img">
+                            <div className="sponsor">
+                                <a href="https://th-web.fr" target="_blank"><img src="/sponsors/th-web.svg" /></a>
+                            </div>
+                            <div className="sponsor">
+                                <a href="https://cedricmenanteau.fr" target="_blank"><img src="/sponsors/cedricmenanteau.png" /></a>
+                            </div>
                         </div>
                     </div>
                 </div>
