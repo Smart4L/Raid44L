@@ -129,9 +129,6 @@
     color: #EFEFEF;
     position: absolute;
     cursor: zoom-in;
-
-
-    /*display: inherit;*/
 }
 
 .photo:hover img{
@@ -141,4 +138,11 @@
 
 .photo:hover .text{
     opacity: 1;
+}
+
+.text > .date{
+    font-size: 15px;
+}
+.text > .lieu{
+    font-size: 15px;
 }

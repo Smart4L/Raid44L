@@ -1,10 +1,36 @@
 import React from "react";
 import './css/galerie.css'
 
+import {getData} from "./request"
+import {shuffle} from "./shuffle"
+
+const R = require('ramda');
+
 export default class Galerie extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            imgs: [],
+            dict: ["Se Préparer", "Réparer", "Partager", "Soutenir"],
+            display: []
+        }
     }
+
+    componentWillMount() {
+        this.getImgs()
+    }
+
+    getImgs = async() => {
+        let imgs = await getData("http://127.0.0.1:8000/imgs/")
+        this.setState({imgs})
+        this.shuffleArray()
+    }
+
+    shuffleArray = () =>{
+        let display = shuffle(R.concat(this.state.imgs,this.state.dict))
+        this.setState({ display })
+    }
+
     render() {
         return(
             <div className="galerie">
@@ -54,67 +80,25 @@ export default class Galerie extends React.Component {
                     </div>
                 </div>
                 <div className="photos">
-                    <div className="photo">
-                        <img src="/illustration-1.png"/>
-                        <div className="text">Le départ</div>
-                    </div>
-                    <div className="photo">
-                        <img src="/illustration-1.png"/>
-                        <div className="text">Le départ</div>
-                    </div>
-                    <div className="photo">
-                        <img src="/illustration-1.png"/>
-                        <div className="text">Le départ</div>
-                    </div>
-                    <div className="photo">
-                        <img src="/illustration-1.png"/>
-                        <div className="text">Le départ</div>
-                    </div>
-                    <div className="photo">
-                        se préparer
-                    </div>
-                    <div className="photo">
-                        <img src="/illustration-1.png"/>
-                        <div className="text">Le départ</div>
-                    </div>
-                    <div className="photo">
-                        <img src="/illustration-1.png"/>
-                        <div className="text">Le départ</div>
-                    </div>
-                    <div className="photo">
-                        <img src="/illustration-1.png"/>
-                        <div className="text">Le départ</div>
-                    </div>
-                    <div className="photo">
-                        <img src="/illustration-1.png"/>
-                        <div className="text">Le départ</div>
-                    </div>
-                    <div className="photo">
-                        <img src="/illustration-1.png"/>
-                        <div className="text">Le départ</div>
-                    </div>
-                    <div className="photo">
-                        réparer
-                    </div>
-                    <div className="photo">
-                        <img src="/illustration-1.png"/>
-                        <div className="text">Le départ</div>
-                    </div>
-                    <div className="photo">
-                        <img src="/illustration-1.png"/>
-                        <div className="text">Le départ</div>
-                    </div>
-                    <div className="photo">
-                        <img src="/illustration-1.png"/>
-                        <div className="text">Le départ</div>
-                    </div>
-                    <div className="photo">
-                        <img src="/illustration-1.png"/>
-                        <div className="text">Le départ</div>
-                    </div>
-                    <div className="photo">
-                        partager
-                    </div>
+                    {
+                        this.state.imgs.map((item,i) =>
+                            <div className="photo">
+                                <img src={`data:image/jpeg;base64,${item.fields.img}`}/>
+                                <div className="text">
+                                    {item.fields.description}
+                                    <div className="date">{item.fields.date}</div>
+                                    <div className="lieu">{item.fields.lieu}</div>
+                                </div>
+                            </div>
+                        )
+                    }
+                    {
+                        this.state.dict.map((item,i) =>
+                            <div className="photo">
+                                {item}
+                            </div>
+                        )
+                    }
                 </div>
                 <div className="bandeaux">
                     <div className="bandeaux-block">
