@@ -1,6 +1,8 @@
 import React from "react";
 import './css/contact.css'
 
+import {AiOutlineFacebook, AiOutlineTwitter, AiOutlineInstagram} from 'react-icons/ai';
+
 export default class Contact extends React.Component {
     constructor(props) {
         super(props);
@@ -31,6 +33,12 @@ export default class Contact extends React.Component {
                    <div className="bg_opacity">
                        <div className="border_left"></div>
                             <h1 className="title-contact">Nous contacter</h1>
+                            <div className="ReseauSociaux">
+                                <a href="https://www.facebook.com/Raid-44L-111933133874314ra" target="_blank"><AiOutlineFacebook/> Facebook</a>
+                                <a href="https://twitter.com/Raid_44l" target="_blank"><AiOutlineTwitter/> Twitter</a>
+                                <a href="https://www.instagram.com/raid_44l" target="_blank"><AiOutlineInstagram/> Instagram</a>
+                            </div>
+
                        <div className="border_right"></div>
                    </div>
                    <div className="illustration"></div>

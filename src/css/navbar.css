@@ -17,7 +17,12 @@
     color: #ffb000;
 }
 
-.links ul li:hover{
+.links ul li a{
+    color: #ffb000;
+    text-decoration: none;
+}
+
+.links ul li a:hover{
     color: #EC5A23;
 }
 
@@ -30,3 +35,4 @@
     position: absolute;
     left: 0;
 }
+

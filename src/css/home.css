@@ -259,7 +259,10 @@
 
 .sponsors{
     width: 100%;
-    height: auto;
+}
+
+.sponsors-top{
+    height: 100px;
 }
 
 .border-top-sponsor{
@@ -278,8 +281,12 @@
     border-bottom:1px solid black;
     border-right:1px solid black;
     position: relative;
-    right: 550px;
-    bottom: -20px;
+    left: 1300px;
+    top: -40px;
+}
+
+.sponsors-bottom{
+    margin-top: 70px;
 }
 
 .sponsor-img{
@@ -287,7 +294,7 @@
 }
 
 .sponsor{
-    display: inline-block;
+    display: inline;
     width: 100px;
     height: 100px;
     margin: 50px;
@@ -298,4 +305,40 @@
     /*display: inline-block;*/
     /*padding: 10px;*/
     height: 100px;
+    margin: 50px 0px;
+}
+
+@media screen and (max-width: 720px) {
+    .bg-home{}
+    .border-left{
+        display: none;
+    }
+    .border-right{
+        display: none;
+    }
+    .presentation{
+        width: 100%;
+    }
+    .car-icon{
+        display: none;
+    }
+    .race{
+        width: 100%;
+        padding-bottom: 15px;
+    }
+    .map{
+        display: none;
+    }
+    .border-top{
+        display: none;
+    }
+    .border-bottom{
+        display: none;
+    }
+    .border-top-sponsor{
+        display: none;
+    }
+    .border-bottom-sponsor{
+        display: none;
+    }
 }

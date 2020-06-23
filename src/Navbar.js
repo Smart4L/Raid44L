@@ -1,12 +1,14 @@
 import React from "react";
 import {
-    BrowserRouter as Router,
+    HashRouter as Router,
     Switch,
     Route,
-    Link, NavLink
+    Link, NavLink,
+    withRouter
 } from "react-router-dom";
 
 import Home from "./Home";
+import Sponsors from "./Sponsors";
 import Galerie from "./Galerie";
 import Contact from "./Contact";
 
@@ -18,21 +20,17 @@ export default function Navbar() {
             <div class="navbar">
                 <div class="links">
                     <ul>
-                        <NavLink exact to="/" activeClassName="navbar__link--active"><li>Accueil</li></NavLink>
-                        <NavLink to="/galerie" activeClassName="navbar__link--active"><li>Galerie</li></NavLink>
-                        <NavLink to="/contact" activeClassName="navbar__link--active"><li>Contact</li></NavLink>
+                        <li><NavLink exact to="/" activeClassName="navbar__link--active">Accueil</NavLink></li>
+                        <li><NavLink to="/sponsors" activeClassName="navbar__link--active">Sponsors</NavLink></li>
+                        <li><NavLink to="/galerie" activeClassName="navbar__link--active">Galerie</NavLink></li>
+                        <li><NavLink to="/contact" activeClassName="navbar__link--active">Contact</NavLink></li>
                     </ul>
                 </div>
                 <Switch>
-                    <Route path="/galerie">
-                        <Galerie />
-                    </Route>
-                    <Route path="/contact">
-                         <Contact/>
-                    </Route>
-                    <Route path="/">
-                        <Home />
-                    </Route>
+                    <Route exact path="/" component={withRouter(Home)} />
+                    <Route exact path="/sponsors" component={withRouter(Sponsors)} />
+                    <Route exact path="/galerie" component={withRouter(Galerie)} />
+                    <Route exact path="/contact" component={withRouter(Contact)} />
                 </Switch>
             </div>
         </Router>

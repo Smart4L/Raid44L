@@ -40,13 +40,14 @@ export default class Home extends React.Component {
                             <img className="icon" src="/car.png" alt=""/>
                             <h2>Raid 44L</h2>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Vivamusviverra sem vel enim ultrices, non auctor tellus dictum.
-                            Morbi torto elit, fringilla nec nisi et, egestas aliquam massa.
-                            Cras vulputate pellentesque tincidunt. In dapibus, arcu id semper commodo,
-                            orci nisl ultrices metus, ac convallis massa urna a eros.  In nec ligula id arcu condimentum feugiat.
-                            Sed fermentum sed porta vestibulum, porta sit amet est.
-                            Nulla tincidunt maximus pretium. Nulla sollicitudin vitaeante eu venenatis.</p>
+                        <p>
+                            Raid 44L est une jeune association créée en Février 2020.
+                            Elle assiste les équipages à participer au 4L Trophy, l'objectif est d'apporter du matériel éducatif et des denrées alimentaires aux plus démunis.
+                            <br/>
+                            Raid 44L aide ces membres à la réalisation du projet 4L Trophy, aides administratives, conseils mécaniques, ...
+                            Elle possède un petit réseau associatif comprenant un garagiste, un carrosier et plusieurs ex-participant du 4L Trophy.
+
+                        </p>
                         <hr/>
                     </div>
                     <img className="car-icon" src="/logo-Raid-44L-black.png" alt=""/>
@@ -105,15 +106,17 @@ export default class Home extends React.Component {
                     </div>
                 </div>
                 <div className="sponsors">
-                    <div className="top">
-                        <img className="icon" src="/helmet.png" alt=""/>
+                    <div className="sponsors-top">
                         <div className="border-top-sponsor"></div>
                         <h2>Les Sponsors</h2>
                         <div className="border-bottom-sponsor"></div>
                     </div>
-                    <div className="container">
+                    <div className="container sponsors-bottom">
                         Serez-vous le prochain ? <Link to="/contact">Contactez-nous</Link>
                         <div className="sponsor-img">
+                            <div className="sponsor">
+                                <a href="https://twitter.com/EuroArcSautron" target="_blank"><img src="/sponsors/euro-arc-sautron-logo.jpg" /></a>
+                            </div>
                             <div className="sponsor">
                                 <a href="https://th-web.fr" target="_blank"><img src="/sponsors/th-web.svg" /></a>
                             </div>

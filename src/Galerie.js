@@ -21,7 +21,7 @@ export default class Galerie extends React.Component {
     }
 
     getImgs = async() => {
-        let imgs = await getData("http://127.0.0.1:8000/imgs/")
+        let imgs = await getData("http://88.99.25.19/imgs/")
         this.setState({imgs})
         this.shuffleArray()
     }
@@ -35,31 +35,31 @@ export default class Galerie extends React.Component {
         return(
             <div className="galerie">
                 <div className="big-video">
-                    <iframe src="https://www.youtube.com/embed/92sXWVxRr0g" frameBorder="0"
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z0XgC8eJWxY" frameBorder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen/>
+                            allowFullScreen></iframe>
                 </div>
                 <div className="small-videos">
                     <div className="small-video">
-                        <img src="/illustration-1.png"/>
+                    <img src="/illustration-1.png"/>
+                    <div className="text-video">
+                        Images à Venir
+                        <p className="date">14/05/2020</p>
+                        <p className="lieu">Nantes</p>
+                    </div>
+                </div>
+                    <div className="small-video">
+                        <img src="/photos/recuperation.jpg"/>
                         <div className="text-video">
-                            Avec un TEXTE super long, vraiment super long c'est trop chiant
-                            <p className="date">14/05/2020</p>
-                            <p className="lieu">Nantes</p>
-                        </div>
+                            Récupération de la Voiture
+                        <p className="date">02/06/2020</p>
+                        <p className="lieu">Tillières</p>
+                    </div>
                     </div>
                     <div className="small-video">
                         <img src="/illustration-1.png"/>
                         <div className="text-video">
-                            Avec un TEXTE super long, vraiment super long c'est trop chiant
-                            <p className="date">14/05/2020</p>
-                            <p className="lieu">Nantes</p>
-                        </div>
-                    </div>
-                    <div className="small-video">
-                        <img src="/illustration-1.png"/>
-                        <div className="text-video">
-                            Avec un TEXTE super long, vraiment super long c'est trop chiant
+                            Images à Venir
                             <p className="date">14/05/2020</p>
                             <p className="lieu">Nantes</p>
                         </div>
@@ -92,6 +92,9 @@ export default class Galerie extends React.Component {
                             </div>
                         )
                     }
+                    {/*<div className="photo">*/}
+                    {/*    <img src="https://drive.google.com/uc?export=view&id=10j2rCDwJ-byTAMD5wr0DNMH_OHBGtTkI"/>*/}
+                    {/*</div>*/}
                     {
                         this.state.dict.map((item,i) =>
                             <div className="photo">

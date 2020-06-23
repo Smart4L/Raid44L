@@ -27,6 +27,19 @@
     border-right: 1px solid white;
 }
 
+.ReseauSociaux > a{
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.ReseauSociaux > a:hover{
+    color: #ffb000;
+    /*text-decoration: underline;*/
+    border-bottom: 1mm solid  #ffb000;
+}
+
 .illustration{
     background-image: url("../assets/img/contact.jpg");
     background-size: cover;
