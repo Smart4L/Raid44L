@@ -28,9 +28,9 @@
 .border-left{
     position: absolute;
     left: 30vw;
-    top:30vh;
-    width: 50px;
-    height: 80px;
+    top: 30vh;
+    width: 100px;
+    height: 45px;
     border-top: 2px solid white;
     border-left: 2px solid white;
 }

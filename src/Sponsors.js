@@ -26,7 +26,7 @@ export default class Sponsors extends React.Component {
                         <div className="border-bottom-sponsor"></div>
                     </div>
                     <div className="container sponsors-bottom">
-                        Serez-vous le prochain ? <Link to="/contact">Contactez-nous</Link>
+                        Soyez le prochain <Link to="/contact">Contactez-nous</Link>
                         <div className="sponsor-img">
                             <div className="sponsor">
                                 <a href="https://twitter.com/EuroArcSautron" target="_blank"><img src="/sponsors/euro-arc-sautron-logo.jpg" /></a>
