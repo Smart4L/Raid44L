@@ -1,0 +1,37 @@
+.navbar{
+    height: 70px;
+    width: 100%;
+    background-color: black;
+
+    .links ul {
+        margin: 0;
+    }
+    
+    .links ul li{
+        font-family: "4L";
+        font-size: 1.5em;
+        display: inline-block;
+        line-height: 70px;
+        margin: 0px 10px;
+        color: #ffb000;
+    }
+    
+    .links ul li a{
+        color: #ffb000;
+        text-decoration: none;
+    }
+    
+    .links ul li a:hover{
+        color: #EC5A23;
+    }
+    
+    .navbar__link--active {
+        border-bottom: 3px solid #EC5A23;
+    }
+    
+    .logo-icon {
+        width: 40px;
+        position: absolute;
+        left: 0;
+    }
+}

@@ -1,6 +1,5 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import './css/sponsors.css'
 
 export default class Sponsors extends React.Component {
     constructor(props) {

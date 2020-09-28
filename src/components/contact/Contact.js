@@ -1,6 +1,4 @@
 import React from "react";
-import './css/contact.css'
-
 import {AiOutlineFacebook, AiOutlineTwitter, AiOutlineInstagram} from 'react-icons/ai';
 
 export default class Contact extends React.Component {

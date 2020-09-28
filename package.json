@@ -11,6 +11,7 @@
     "axios": "^0.19.2",
     "emailjs-com": "^2.4.1",
     "googleapis": "^39.2.0",
+    "node-sass": "^4.14.1",
     "ramda": "^0.27.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",

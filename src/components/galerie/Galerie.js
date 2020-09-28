@@ -1,8 +1,6 @@
 import React from "react";
-import './css/galerie.css'
-
-import {getData} from "./request"
-import {shuffle} from "./shuffle"
+import {getData} from "../../utils/request"
+import {shuffle} from "../../utils/shuffle"
 
 const R = require('ramda');
 

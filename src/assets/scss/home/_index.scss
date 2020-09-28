@@ -1,0 +1,344 @@
+.bg-home{
+    background-image: url("../../../assets/img/bg-home.jpg");
+    background-size: cover;
+    height: 80vh;
+}
+
+.bg-opacity {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    height: 80vh;
+    width: 100%;
+    z-index: 10;
+    top: 70px;
+    color: white;
+}
+
+.trophy {
+    width:130px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.subtitle{
+    margin-top: 35vh;
+}
+
+.border-left{
+    position: absolute;
+    left: 30vw;
+    top: 30vh;
+    width: 100px;
+    height: 45px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+}
+
+.border-right{
+    position: absolute;
+    right: 30vw;
+    top: 40vh;
+    width: 100px;
+    height: 45px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+}
+
+.subtitle h1 {
+    text-transform: uppercase;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: #EFEFEF;
+    padding: 16px;
+}
+
+.menu p {
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.icon-menu {
+    width: 30px;
+    height: 30px;
+}
+
+.bg-orange{
+    background-color: #ffb000;
+    padding: 100px 80px;
+    display: flex;
+}
+
+.presentation{
+    width: 40%;
+    padding: 100px 20px;
+    text-align: right;
+    position: relative;
+}
+
+.presentation h2 {
+    font-family: "4L";
+}
+
+.car-icon {
+    width: 500px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.presentation .top {
+    display: flex;
+    justify-content: right;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.presentation hr{
+    margin-top: 50px;
+    width: 200px;
+    position: absolute;
+    right: 20px;
+}
+
+.transition {
+    display: flex;
+    width: 100%;
+}
+
+.transition img{
+    width: 50%;
+    height: 100%;
+}
+
+.bg-grey{
+    background-color: #EFEFEF;
+    text-align: center;
+    width: 50%;
+    font-family: "4L";
+    padding: 45px 0;
+    font-size: 25px;
+}
+
+.raid{
+    display: flex;
+}
+
+.race {
+    height: auto;
+    width: 50%;
+    text-align: center;
+    background-color: #EFEFEF;
+}
+
+.race .top{
+    display: flex;
+    justify-content: center;
+}
+
+.race .top .icon{
+    width: 50px;
+    height: 50px;
+}
+
+.race .center p {
+    font-family: "Raleway";
+    text-align: right;
+    padding: 10px 38px;
+}
+
+.race .center p:first-child{
+    margin: 40px 0;
+}
+
+.race .center h3 {
+    margin-top: 20px;
+    font-family: "4L";
+    text-align: right;
+    padding-right: 38px;
+}
+
+.raid img {
+    width: 50%;
+    height: 100%;
+}
+
+.race .bottom{
+    text-align: center;
+    border: 2px solid #ffb000;
+    padding: 10px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.race .bottom p {
+    display: inline;
+}
+
+.race .bottom h3 {
+    margin-top: 20px;
+    font-family: "4L";
+    text-align: center;
+}
+
+.pilotes {
+    background-color: #ffb000;
+}
+
+.pilotes h2{
+    margin: 0 auto 10px;
+}
+
+.pilotes .container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.p1,
+.p2 {
+    border : 1px solid black;
+    width: 500px;
+    margin: 20px;
+    padding: 50px 20px 30px;
+    border-radius: 3px;
+}
+
+.p1 h3,
+.p2 h3 {
+    font-family: "4L";
+}
+
+.p1 img{
+    width: 100px;
+    position: absolute;
+    top: -35px;
+    left: 310px;
+    border-radius: 5px;
+}
+
+.p2 img {
+    width: 100px;
+    position: absolute;
+    top: -35px;
+    right: 310px;
+    border-radius: 5px;
+}
+
+.pilotes .top {
+    position: relative;
+}
+
+.border-top {
+    width: 50px;
+    height: 30px;
+    border-top:1px solid black;
+    border-left:1px solid black;
+    position: absolute;
+    left: 550px;
+    top: 30px;
+}
+
+.border-bottom {
+    width: 50px;
+    height: 30px;
+    border-bottom:1px solid black;
+    border-right:1px solid black;
+    position: absolute;
+    right: 550px;
+    bottom: -20px;
+}
+
+.sponsors{
+    width: 100%;
+}
+
+.sponsors-top{
+    height: 100px;
+}
+
+.border-top-sponsor{
+    width: 50px;
+    height: 30px;
+    border-top:1px solid black;
+    border-left:1px solid black;
+    position: relative;
+    left: 550px;
+    top: 30px;
+}
+
+.border-bottom-sponsor{
+    width: 50px;
+    height: 30px;
+    border-bottom:1px solid black;
+    border-right:1px solid black;
+    position: relative;
+    left: 1300px;
+    top: -40px;
+}
+
+.sponsors-bottom{
+    margin-top: 70px;
+}
+
+.sponsor-img{
+    display: block;
+}
+
+.sponsor{
+    display: inline;
+    width: 100px;
+    height: 100px;
+    margin: 50px;
+    line-height: 150px;
+}
+
+.sponsor img{
+    /*display: inline-block;*/
+    /*padding: 10px;*/
+    height: 100px;
+    margin: 50px 0px;
+}
+
+@media screen and (max-width: 720px) {
+    .bg-home{}
+    .border-left{
+        display: none;
+    }
+    .border-right{
+        display: none;
+    }
+    .presentation{
+        width: 100%;
+    }
+    .car-icon{
+        display: none;
+    }
+    .race{
+        width: 100%;
+        padding-bottom: 15px;
+    }
+    .map{
+        display: none;
+    }
+    .border-top{
+        display: none;
+    }
+    .border-bottom{
+        display: none;
+    }
+    .border-top-sponsor{
+        display: none;
+    }
+    .border-bottom-sponsor{
+        display: none;
+    }
+}
