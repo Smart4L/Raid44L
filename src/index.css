@@ -1,4 +1,4 @@
-@font-face{
+@font-face {
   font-family: "4L";
   src: url("fonts/Captureit.ttf") format("truetype");
 }
@@ -16,13 +16,12 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 h1,
 h2 {
   font-family: "4L", sans-serif;
+  text-align: center;
 }
-
-
