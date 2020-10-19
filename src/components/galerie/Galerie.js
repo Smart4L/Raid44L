@@ -1,6 +1,6 @@
 import React from "react";
-import {getData} from "../../utils/request"
-import {shuffle} from "../../utils/shuffle"
+import { getData } from "../../utils/request";
+import { shuffle } from "../../utils/shuffle";
 
 const R = require('ramda');
 
@@ -19,14 +19,30 @@ export default class Galerie extends React.Component {
     }
 
     getImgs = async() => {
-        let imgs = await getData("http://88.99.25.19/imgs/")
+        let data = await getData("https://www.instagram.com/raid_44L/?__a=1")
+        //this.setState({imgs})
+        //console.log(data)
+        //console.log(data.graphql.user.edge_owner_to_timeline_media.edges)
+        let imgs = data.graphql.user.edge_owner_to_timeline_media.edges
         this.setState({imgs})
         this.shuffleArray()
     }
 
-    shuffleArray = () =>{
+    shuffleArray = () => {
         let display = shuffle(R.concat(this.state.imgs,this.state.dict))
         this.setState({ display })
+        console.log(display)
+    }
+
+    displayPhoto = (photo) => {
+        if(typeof photo === 'object'){
+            return(
+                <img src={photo.node.display_url}/>
+            )
+        }
+        return(
+            photo
+        )
     }
 
     render() {
@@ -39,17 +55,17 @@ export default class Galerie extends React.Component {
                 </div>
                 <div className="small-videos">
                     <div className="small-video">
-                    <img src="/illustration-1.png"/>
-                    <div className="text-video">
-                        Images à Venir
-                        <p className="date">14/05/2020</p>
-                        <p className="lieu">Nantes</p>
+                    <img src="/photos/4L_bleu.jpg"/>
+                        <div className="text-video">
+                            Et voilà notre voiture
+                            <p className="date">17/10/2020</p>
+                            <p className="lieu">Rezé</p>
+                        </div>
                     </div>
-                </div>
                     <div className="small-video">
                         <img src="/photos/recuperation.jpg"/>
                         <div className="text-video">
-                            Récupération de la Voiture
+                            La 4L d'une autre équipe
                         <p className="date">02/06/2020</p>
                         <p className="lieu">Tillières</p>
                     </div>
@@ -79,27 +95,25 @@ export default class Galerie extends React.Component {
                 </div>
                 <div className="photos">
                     {
-                        this.state.imgs.map((item,i) =>
+                        this.state.display.map((item,i) =>
                             <div className="photo">
-                                <img src={`data:image/jpeg;base64,${item.fields.img}`}/>
-                                <div className="text">
-                                    {item.fields.description}
-                                    <div className="date">{item.fields.date}</div>
-                                    <div className="lieu">{item.fields.lieu}</div>
-                                </div>
+                                {this.displayPhoto(item)}
+                                {/* <img src={item.node.display_url}/> */}
+                                {/* <div className="text"> */}
+                                    {/* {item.fields.description} */}
+                                    {/* <div className="date">{item.fields.date}</div> */}
+                                    {/* <div className="lieu">{item.fields.lieu}</div> */}
+                                {/* </div> */}
                             </div>
                         )
                     }
-                    {/*<div className="photo">*/}
-                    {/*    <img src="https://drive.google.com/uc?export=view&id=10j2rCDwJ-byTAMD5wr0DNMH_OHBGtTkI"/>*/}
-                    {/*</div>*/}
-                    {
+                    {/* {
                         this.state.dict.map((item,i) =>
                             <div className="photo">
                                 {item}
                             </div>
                         )
-                    }
+                    } */}
                 </div>
                 <div className="bandeaux">
                     <div className="bandeaux-block">

@@ -28,18 +28,17 @@ export default class Contact extends React.Component {
        return(
            <div className="container-contact">
                <div className="container-left">
-                   <div className="bg_opacity">
+                   <div className="title">
                        <div className="border_left"></div>
-                            <h1 className="title-contact">Nous contacter</h1>
-                            <div className="ReseauSociaux">
-                                <a href="https://www.facebook.com/Raid-44L-111933133874314ra" target="_blank"><AiOutlineFacebook/> Facebook</a>
-                                <a href="https://twitter.com/Raid_44l" target="_blank"><AiOutlineTwitter/> Twitter</a>
-                                <a href="https://www.instagram.com/raid_44l" target="_blank"><AiOutlineInstagram/> Instagram</a>
-                            </div>
-
+                        <h1 className="title-contact">Nous contacter</h1>
                        <div className="border_right"></div>
                    </div>
-                   <div className="illustration"></div>
+                   <div className="ReseauSociaux">
+                        <a href="https://www.facebook.com/Raid-44L-111933133874314ra" target="_blank"><AiOutlineFacebook/> Facebook</a>
+                        <a href="https://twitter.com/Raid_44l" target="_blank"><AiOutlineTwitter/> Twitter</a>
+                        <a href="https://www.instagram.com/raid_44l" target="_blank"><AiOutlineInstagram/> Instagram</a>
+                    </div>
+                   {/* <div className="illustration"></div> */}
                </div>
                <div className="container-right">
                    <form>
@@ -97,7 +96,7 @@ export default class Contact extends React.Component {
                        <input
                            type="button"
                            value="Envoyer"
-                           style={{width: '15%', height: '30px'}}
+                           style={{width: '20%', height: '30px'}}
                            onClick={this.handleSubmit}
                        />
                    </form>

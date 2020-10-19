@@ -8,7 +8,9 @@
 }
 
 .small-videos{
-    display: block;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
 }
 
 .small-video{
@@ -92,21 +94,26 @@
 }
 
 .photos{
-    display: block;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 0 50px;
 }
 
 .photo{
-    width: 400px;
-    height: 200px;
-    display: inline-block;
+    width: 300px;
+    height: 300px;
     margin: 5px 5px;
     background-color: #ffb000;
+    border-color: black;
     color: white;
     vertical-align: top;
-    line-height: 190px;
+    line-height: 300px;
+    text-align: center;
     font-size: 30px;
     font-family: "4L", sans-serif;
     position: relative;
+    margin: 10px 40px;
 }
 
 .photo img{
@@ -145,4 +152,16 @@
 }
 .text > .lieu{
     font-size: 15px;
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .small-videos{
+        display: none;
+    }
+    .border-top-galerie{
+        display: none;
+    }
+    .border-bottom-galerie{
+        display: none;
+    }
 }

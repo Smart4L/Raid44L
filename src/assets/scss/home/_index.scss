@@ -263,59 +263,8 @@
   bottom: -20px;
 }
 
-.sponsors {
-  width: 100%;
-}
 
-.sponsors-top {
-  height: 100px;
-}
-
-.border-top-sponsor {
-  width: 50px;
-  height: 30px;
-  border-top: 1px solid black;
-  border-left: 1px solid black;
-  position: relative;
-  left: 550px;
-  top: 30px;
-}
-
-.border-bottom-sponsor {
-  width: 50px;
-  height: 30px;
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;
-  position: relative;
-  left: 850px;
-  top: -40px;
-}
-
-.sponsors-bottom {
-  margin-top: 70px;
-  display: flex;
-}
-
-.sponsor-img {
-  display: block;
-}
-
-.sponsor {
-  display: inline;
-  width: 100px;
-  height: 100px;
-  margin: 50px;
-  line-height: 150px;
-}
-
-.sponsor img {
-  /*display: inline-block;*/
-  /*padding: 10px;*/
-  height: 100px;
-  margin: 50px 0px;
-}
-
-@media screen and (max-width: 720px) {
+@media screen and (max-width: $breakpoint-tablet) {
   .bg-home {
   }
   .border-left {
@@ -326,9 +275,20 @@
   }
   .presentation {
     width: 100%;
+    text-align: left;
   }
   .car-icon {
     display: none;
+  }
+  .transition{
+    img{
+      display: none;
+    }
+
+    .bg-grey{
+      width: 100%;
+      font-size: 22px;
+    }
   }
   .race {
     width: 100%;
@@ -348,5 +308,17 @@
   }
   .border-bottom-sponsor {
     display: none;
+  }
+
+  .p1{
+    img{
+      display: none;
+    }
+  }
+
+  .p2{
+    img{
+      display: none;
+    }
   }
 }
