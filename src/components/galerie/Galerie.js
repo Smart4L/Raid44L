@@ -3,6 +3,7 @@ import { getData } from "../../utils/request";
 import env from "react-dotenv";
 
 const R = require('ramda');
+const moment = require('moment');
 
 export default class Galerie extends React.Component {
     constructor(props) {
@@ -76,11 +77,17 @@ export default class Galerie extends React.Component {
     displayPhoto = (photo, i) => {
         if(typeof photo === 'object'){
             return(
-                <img alt={photo.id} src={photo.media_url}/>
+                <div id={photo.id} className="photo">
+                    <img alt={photo.id} src={photo.media_url}/>
+                    <div className="text">
+                        <span>{photo.caption}</span>
+                        <span>{moment(photo.timestamp).format("DD-MM-YYYY")}</span>
+                    </div>
+                </div>
             )
         }
         return(
-            <span alt={i}>{photo}</span>
+            <span className="text-block" alt={i}>{photo}</span>
         )
     }
 
@@ -134,15 +141,7 @@ export default class Galerie extends React.Component {
                 <div className="photos">
                     {
                         this.state.display.map((item,i) =>
-                            <div className="photo">
-                                {this.displayPhoto(item, i)}
-                                {/* <img src={item.node.display_url}/> */}
-                                {/* <div className="text"> */}
-                                    {/* {item.fields.description} */}
-                                    {/* <div className="date">{item.fields.date}</div> */}
-                                    {/* <div className="lieu">{item.fields.lieu}</div> */}
-                                {/* </div> */}
-                            </div>
+                            this.displayPhoto(item, i)
                         )
                     }
                     {/* {
