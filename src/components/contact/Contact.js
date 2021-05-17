@@ -34,9 +34,9 @@ export default class Contact extends React.Component {
                        <div className="border_right"></div>
                    </div>
                    <div className="ReseauSociaux">
-                        <a href="https://www.facebook.com/Raid-44L-111933133874314ra" target="_blank"><AiOutlineFacebook/> Facebook</a>
-                        <a href="https://twitter.com/Raid_44l" target="_blank"><AiOutlineTwitter/> Twitter</a>
-                        <a href="https://www.instagram.com/raid_44l" target="_blank"><AiOutlineInstagram/> Instagram</a>
+                        <a href="https://www.facebook.com/Raid-44L-111933133874314ra" target="_blank" rel="noopener noreferrer"><AiOutlineFacebook/> Facebook</a>
+                        <a href="https://twitter.com/Raid_44l" target="_blank" rel="noopener noreferrer"><AiOutlineTwitter/> Twitter</a>
+                        <a href="https://www.instagram.com/raid_44l" target="_blank" rel="noopener noreferrer"><AiOutlineInstagram/> Instagram</a>
                     </div>
                    {/* <div className="illustration"></div> */}
                </div>

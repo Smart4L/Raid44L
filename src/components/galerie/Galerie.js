@@ -1,15 +1,13 @@
 import React from "react";
 import { getData } from "../../utils/request";
-import { shuffle } from "../../utils/shuffle";
-
-const R = require('ramda');
+import env from "react-dotenv";
 
 export default class Galerie extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             imgs: [],
-            dict: ["Se Préparer", "Réparer", "Partager", "Soutenir"],
+            dict: ["Se Préparer", "Réparer", "Partager", "Soutenir", "Partir à l'Aventure"],
             display: []
         }
     }
@@ -19,29 +17,33 @@ export default class Galerie extends React.Component {
     }
 
     getImgs = async() => {
-        let data = await getData("https://www.instagram.com/raid_44L/?__a=1")
-        //this.setState({imgs})
-        //console.log(data)
-        //console.log(data.graphql.user.edge_owner_to_timeline_media.edges)
-        let imgs = data.graphql.user.edge_owner_to_timeline_media.edges
-        this.setState({imgs})
-        this.shuffleArray()
+        try {
+            let data = await getData(`https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp&access_token=${env.INSTA_TOKEN}`)
+            let imgs = data.data
+            this.setState({imgs})
+        } 
+        catch (error) {
+        }
+        this.organiseArray()
     }
 
-    shuffleArray = () => {
-        let display = shuffle(R.concat(this.state.imgs,this.state.dict))
+    organiseArray = () => {
+        this.state.dict.forEach(word => {
+            let rand = Math.floor(Math.random() * this.state.imgs.length)
+            this.state.imgs.splice(rand, 0, word)
+        })
+        let display = this.state.imgs
         this.setState({ display })
-        console.log(display)
     }
 
-    displayPhoto = (photo) => {
+    displayPhoto = (photo, i) => {
         if(typeof photo === 'object'){
             return(
-                <img src={photo.node.display_url}/>
+                <img alt={photo.id} src={photo.media_url}/>
             )
         }
         return(
-            photo
+            <span alt={i}>{photo}</span>
         )
     }
 
@@ -49,13 +51,12 @@ export default class Galerie extends React.Component {
         return(
             <div className="galerie">
                 <div className="big-video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z0XgC8eJWxY" frameBorder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    <iframe title="video" width="560" height="315" src="https://www.youtube.com/embed/2BjlPoMVa0k" frameBorder="0"
                             allowFullScreen></iframe>
                 </div>
                 <div className="small-videos">
                     <div className="small-video">
-                    <img src="/photos/4L_bleu.jpg"/>
+                    <img alt="left" src="/photos/4L_bleu.jpg"/>
                         <div className="text-video">
                             Et voilà notre voiture
                             <p className="date">17/10/2020</p>
@@ -63,21 +64,21 @@ export default class Galerie extends React.Component {
                         </div>
                     </div>
                     <div className="small-video">
-                        <img src="/photos/recuperation.jpg"/>
+                        <img alt="center" src="/photos/recuperation.jpg"/>
                         <div className="text-video">
                             La 4L d'une autre équipe
                         <p className="date">02/06/2020</p>
                         <p className="lieu">Tillières</p>
                     </div>
                     </div>
-                    <div className="small-video">
-                        <img src="/illustration-1.png"/>
+                    {/* <div className="small-video">
+                        <img alt="right" src="/illustration-1.png"/>
                         <div className="text-video">
                             Images à Venir
                             <p className="date">14/05/2020</p>
                             <p className="lieu">Nantes</p>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="bandeaux">
                     <div className="bandeaux-block">
@@ -97,7 +98,7 @@ export default class Galerie extends React.Component {
                     {
                         this.state.display.map((item,i) =>
                             <div className="photo">
-                                {this.displayPhoto(item)}
+                                {this.displayPhoto(item, i)}
                                 {/* <img src={item.node.display_url}/> */}
                                 {/* <div className="text"> */}
                                     {/* {item.fields.description} */}

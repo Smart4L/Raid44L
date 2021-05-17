@@ -48,7 +48,7 @@ export default class Navbar extends React.Component {
                         <div className={`bottom ${this.state.isOpen? '': 'none'}`}>
                             <NavLink exact to="/" activeClassName="navbar__link--active" onClick={ this.close }>Accueil</NavLink>
                             <NavLink to="/sponsors" activeClassName="navbar__link--active" onClick={ this.close }>Sponsors</NavLink>
-                            <NavLink to="/galerie" activeClassName="navbar__link--active" onClick={ this.close }>Galerie</NavLink>
+                            <NavLink to="/galerie" activeClassName="navbar__link--active" onClick={ this.close }>Proposition</NavLink>
                             <NavLink to="/contact" activeClassName="navbar__link--active" onClick={ this.close }>Contact</NavLink>
                         </div>
                     </div>
