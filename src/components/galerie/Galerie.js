@@ -2,17 +2,21 @@ import React from "react";
 import { getData } from "../../utils/request";
 import env from "react-dotenv";
 
+const R = require('ramda');
+
 export default class Galerie extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             imgs: [],
             dict: ["Se Préparer", "Réparer", "Partager", "Soutenir", "Partir à l'Aventure"],
-            display: []
+            display: [],
+            nextLink: null
         }
     }
 
     componentWillMount() {
+        window.addEventListener('scroll', this.infiniteScroll)
         this.getImgs()
     }
 
@@ -20,11 +24,44 @@ export default class Galerie extends React.Component {
         try {
             let data = await getData(`https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp&access_token=${env.INSTA_TOKEN}`)
             let imgs = data.data
-            this.setState({imgs})
+            let nextLink
+            if(data.paging.next){
+                nextLink = data.paging.next
+            } else {
+                nextLink = null
+            }
+            this.setState({imgs, nextLink})
         } 
         catch (error) {
         }
         this.organiseArray()
+    }
+
+    fetchNewMedias = async() => {
+        try {
+            let data = await getData(this.state.nextLink)
+            console.log('fetch next')
+            let imgs = R.concat(this.state.imgs, data.data)
+            let display = imgs
+            let nextLink
+            if(data.paging.next){
+                nextLink = data.paging.next
+            } else {
+                nextLink = null
+            }
+            this.setState({imgs, display, nextLink})
+        } 
+        catch (error) {
+        }
+    }
+
+    infiniteScroll = () => {
+        // End of the document reached?
+        if (window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight){
+           if(this.state.nextLink){
+               this.fetchNewMedias()
+           }
+        }
     }
 
     organiseArray = () => {
