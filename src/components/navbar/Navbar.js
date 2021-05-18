@@ -34,6 +34,7 @@ export default class Navbar extends React.Component {
                                 <li><NavLink exact to="/" activeClassName="navbar__link--active">Accueil</NavLink></li>
                                 <li><NavLink to="/sponsors" activeClassName="navbar__link--active">Sponsors</NavLink></li>
                                 <li><NavLink to="/galerie" activeClassName="navbar__link--active">Galerie</NavLink></li>
+                                <li><NavLink to="/follow" activeClassName="navbar__link--active">Nous suivre</NavLink></li>
                                 <li><NavLink to="/contact" activeClassName="navbar__link--active">Contact</NavLink></li>
                             </ul>
                         </div>
@@ -48,7 +49,8 @@ export default class Navbar extends React.Component {
                         <div className={`bottom ${this.state.isOpen? '': 'none'}`}>
                             <NavLink exact to="/" activeClassName="navbar__link--active" onClick={ this.close }>Accueil</NavLink>
                             <NavLink to="/sponsors" activeClassName="navbar__link--active" onClick={ this.close }>Sponsors</NavLink>
-                            <NavLink to="/galerie" activeClassName="navbar__link--active" onClick={ this.close }>Proposition</NavLink>
+                            <NavLink to="/galerie" activeClassName="navbar__link--active" onClick={ this.close }>Galerie</NavLink>
+                            <NavLink to="/follow" activeClassName="navbar__link--active" onClick={ this.close }>Nous suivre</NavLink>
                             <NavLink to="/contact" activeClassName="navbar__link--active" onClick={ this.close }>Contact</NavLink>
                         </div>
                     </div>

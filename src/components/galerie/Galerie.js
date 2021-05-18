@@ -87,7 +87,7 @@ export default class Galerie extends React.Component {
             )
         }
         return(
-            <span className="text-block" alt={i}>{photo}</span>
+            <span className="text-block" id={i}>{photo}</span>
         )
     }
 
@@ -144,13 +144,6 @@ export default class Galerie extends React.Component {
                             this.displayPhoto(item, i)
                         )
                     }
-                    {/* {
-                        this.state.dict.map((item,i) =>
-                            <div className="photo">
-                                {item}
-                            </div>
-                        )
-                    } */}
                 </div>
                 <div className="bandeaux">
                     <div className="bandeaux-block">

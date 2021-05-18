@@ -5,6 +5,7 @@ import Home from "./components/home/Home";
 import Sponsors from "./components/sponsors/Sponsors";
 import Galerie from "./components/galerie/Galerie";
 import Contact from "./components/contact/Contact";
+import Follow from "./components/follow/Follow";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route exact path="/" component={withRouter(Home)} />
         <Route exact path="/sponsors" component={withRouter(Sponsors)} />
         <Route exact path="/galerie" component={withRouter(Galerie)} />
+        <Route exact path="/follow" component={withRouter(Follow)} />
         <Route exact path="/contact" component={withRouter(Contact)} />
       </Switch>
   </Router>
