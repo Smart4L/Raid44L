@@ -88,14 +88,14 @@ export default class Home extends React.Component {
                         <div className="p1">
                             <img src="jp.png" alt=""/>
                             <h3>Pilote : Jules Peguet</h3>
-                            <p>21 ans<br/>Etudiant en 3ème année à l’EPSI Nantes.<br/>
+                            <p>22 ans<br/>Etudiant en 5ème année à l’EPSI Nantes.<br/>
                                 En alternance chez Sopra Steria.<br/>
                                 Passionné de Mécanique</p>
                         </div>
                         <div className="p2">
-                            <img src="jp.png" alt=""/>
+                            <img src="cb.jpg" alt=""/>
                             <h3>Co-Pilote : Clément Baranger</h3>
-                            <p>21 ans<br/>Etudiant en 3ème année à l’EPSI Nantes.<br/>
+                            <p>22 ans<br/>Etudiant en 5ème année à l’EPSI Nantes.<br/>
                                 En alternance chez Dassault Système.<br/>
                                 Patient, sens de l’orientation </p>
                         </div>

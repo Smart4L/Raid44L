@@ -1516,32 +1516,6 @@
     "@svgr/plugin-svgo" "^4.3.1"
     loader-utils "^1.2.3"
 
-"@swup/plugin@^1.0.0":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@swup/plugin/-/plugin-1.0.1.tgz#10606322508724a5beaed6a09326d8c30c7041fa"
-  integrity sha512-QrTGn1DLx+50CNsk6oGzUFnyNyLkDK6iLb032qKImmAXS+0Dd1cwa8cSGvJ+I27J4qR8y6oJNurgHIEc6ZCTrg==
-
-"@swup/preload-plugin@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@swup/preload-plugin/-/preload-plugin-1.0.3.tgz#f9522d7e223a6aa264a6178cd82af116fb0ab14a"
-  integrity sha512-Au2v5kwwrY2WFYEmRoHa8FXMq7S/7KgO+iG2n5IOS7CZfVilIpqTIEQQ8y7TZsQuL6+Pk/57aycYywVLZ8tc3w==
-  dependencies:
-    "@swup/plugin" "^1.0.0"
-    delegate "^3.2.0"
-    swup "^2.0.0"
-
-"@swup/slide-theme@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@swup/slide-theme/-/slide-theme-1.0.5.tgz#743aab844be68c089e0c9b49b906b2a4c2495738"
-  integrity sha512-0xxqtURSMDScjLMRdNjtxzo8NGCPcmp6VXrQcxIQzQDSAvwNnP8Zw871C+FSL1EMe8OhAzWAP3E3x9vzH+iLHg==
-  dependencies:
-    "@swup/theme" "^1.0.6"
-
-"@swup/theme@^1.0.6":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@swup/theme/-/theme-1.0.7.tgz#e276fa769af0d800a8df16cbaf71efb665bee297"
-  integrity sha512-OINEaf34fYs90l7/YUUKfOf+paY7/FDhOBLwYxrD0w1OjBiItZpw3N+ATA/QklJwmoUu3KkDFOaQG0zT4KxmmA==
-
 "@testing-library/dom@*":
   version "7.24.3"
   resolved "https://registry.yarnpkg.com/@testing-library/dom/-/dom-7.24.3.tgz#dae3071463cf28dc7755b43d9cf2202e34cbb85d"
@@ -3950,16 +3924,6 @@ delayed-stream@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
   integrity sha1-3zrhmayt+31ECqrgsp4icrJOxhk=
-
-delegate@3.1.3:
-  version "3.1.3"
-  resolved "https://registry.yarnpkg.com/delegate/-/delegate-3.1.3.tgz#9a8251a777d7025faa55737bc3b071742127a9fd"
-  integrity sha1-moJRp3fXAl+qVXN7w7BxdCEnqf0=
-
-delegate@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/delegate/-/delegate-3.2.0.tgz#b66b71c3158522e8ab5744f720d8ca0c2af59166"
-  integrity sha512-IofjkYBZaZivn0V8nnsMJGBr4jVLxHDheKSW88PyxS5QC4Vo9ZbZVvhzlSxY87fVq3STR6r+4cGepyHkcWOQSw==
 
 delegates@^1.0.0:
   version "1.0.0"
@@ -8031,11 +7995,6 @@ open@^7.0.2:
     is-docker "^2.0.0"
     is-wsl "^2.1.1"
 
-opencollective-postinstall@^2.0.2:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/opencollective-postinstall/-/opencollective-postinstall-2.0.3.tgz#7a0fff978f6dbfa4d006238fbac98ed4198c3259"
-  integrity sha512-8AV/sCtuzUeTo8gQK5qDZzARrulB3egtLzFgteqB2tcT4Mw7B8Kt7JcDHmltjz6FOAHsvTevk70gZEbhM4ZS9Q==
-
 opn@^5.5.0:
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/opn/-/opn-5.5.0.tgz#fc7164fab56d235904c51c3b27da6758ca3b9bfc"
@@ -10896,14 +10855,6 @@ svgo@^1.0.0, svgo@^1.2.2:
     stable "^0.1.8"
     unquote "~1.1.1"
     util.promisify "~1.0.0"
-
-swup@^2.0.0, swup@^2.0.9:
-  version "2.0.11"
-  resolved "https://registry.yarnpkg.com/swup/-/swup-2.0.11.tgz#062fb913bf89569120031a75771c59ddae3a7473"
-  integrity sha512-HqM1MhOpZB9G23l26un051j7TwHCs2Y/dY0Hk+eiPNhxhyD3CmHDhq0cNkhp//2sF6zODBfv4O/wo/WpXKzcNg==
-  dependencies:
-    delegate "3.1.3"
-    opencollective-postinstall "^2.0.2"
 
 symbol-tree@^3.2.2:
   version "3.2.4"

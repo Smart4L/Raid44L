@@ -95,7 +95,7 @@ export default class Galerie extends React.Component {
         return(
             <div className="galerie">
                 <div className="big-video">
-                    <iframe title="video" width="560" height="315" src="https://www.youtube.com/embed/2BjlPoMVa0k" frameBorder="0"
+                    <iframe title="video" width="560" height="315" src="https://www.youtube.com/embed/_Qr9zNErTMg" frameBorder="0"
                             allowFullScreen></iframe>
                 </div>
                 <div className="small-videos">

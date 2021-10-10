@@ -33,6 +33,11 @@ export default class Sponsors_Img extends React.Component {
                             <img alt="societegenerale" src="/sponsors/societe-generale.png" />
                             </a>
                         </div>
+                        <div className="sponsor">
+                            <a href="https://www.dynamips.com/" target="_blank" rel="noopener noreferrer">
+                            <img alt="dynamips" src="/sponsors/dynamips.png" />
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
