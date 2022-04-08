@@ -1,24 +1,24 @@
 import React from 'react';
-import { HashRouter as Router, Switch, Route, withRouter } from "react-router-dom";
-import Navbar from "./components/navbar/Navbar";
-import Home from "./components/home/Home";
-import Sponsors from "./components/sponsors/Sponsors";
-import Galerie from "./components/galerie/Galerie";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Navbar } from "./components/navbar/Navbar";
+import { Home } from "./components/home/Home";
+import { Sponsors } from "./components/sponsors/Sponsors";
+import { Galerie } from "./components/galerie/Galerie";
+import { Follow } from "./components/follow/Follow";
 import Contact from "./components/contact/Contact";
-import Follow from "./components/follow/Follow";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter >
       <Navbar/>
-      <Switch>
-        <Route exact path="/" component={withRouter(Home)} />
-        <Route exact path="/sponsors" component={withRouter(Sponsors)} />
-        <Route exact path="/galerie" component={withRouter(Galerie)} />
-        <Route exact path="/follow" component={withRouter(Follow)} />
-        <Route exact path="/contact" component={withRouter(Contact)} />
-      </Switch>
-  </Router>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/sponsors" element={<Sponsors/>} />
+        <Route path="/galerie" element={<Galerie/>} />
+        <Route path="/follow" element={<Follow/>} />
+        <Route path="/contact" element={Contact} />
+      </Routes>
+  </BrowserRouter>
   );
 }
 

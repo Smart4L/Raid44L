@@ -1,17 +1,17 @@
 import React from "react";
-import Img from './Sponsors_img'
+import { SponsorsImg } from './Sponsors_img'
 
-export default class Sponsors extends React.Component {
-  render() {
-    return (
-      <div>
-        <div className="bg-orange">
-          <div className="remerciements">
-            <h1>Merci à eux !</h1>
-          </div>
+import "../../assets/css/Sponsors.css";
+
+export const Sponsors = () => {
+  return (
+    <div>
+      <div className="bg-orange">
+        <div className="remerciements">
+          <h1>Merci à eux !</h1>
         </div>
-        <Img />
       </div>
-    );
-  }
+      <SponsorsImg />
+    </div>
+  );
 }

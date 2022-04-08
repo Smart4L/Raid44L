@@ -1,61 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { ImCross } from "react-icons/im";
 
-export default class Navbar extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            isOpen: false,
-        }
+import "../../assets/css/Navbar.css";
+
+export const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false)
+
+    const tap = () => {
+        let invertOpen = !isOpen
+        setIsOpen(invertOpen)
     }
 
-    tap = () => {
-        this.setState({ isOpen: !this.state.isOpen });
+    const close = () => {
+        setIsOpen(false)
     }
 
-    close = () => {
-        this.setState({ isOpen: false });
-    }
-
-    getIcon = () => {
-        return this.state.isOpen ? <GiHamburgerMenu/> : <ImCross/>
-    }
-
-    render() {
-        return (
-        
-            <div> 
-                <div className="hide-mobile">
-                    <div class="navbar">
-                        <div class="links">
-                            <ul>
-                                <li><NavLink exact to="/" activeClassName="navbar__link--active">Accueil</NavLink></li>
-                                <li><NavLink to="/sponsors" activeClassName="navbar__link--active">Sponsors</NavLink></li>
-                                <li><NavLink to="/galerie" activeClassName="navbar__link--active">Galerie</NavLink></li>
-                                <li><NavLink to="/follow" activeClassName="navbar__link--active">Nous suivre</NavLink></li>
-                                <li><NavLink to="/contact" activeClassName="navbar__link--active">Contact</NavLink></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div className="hide-desktop">
-                    <div class="navbar-mobile">
-                        <div class="top">
-                            <span className="burger"><NavLink exact to="/" activeClassName="navbar__link--active" onClick={ this.close }>Raid 44L</NavLink></span>
-                            <span className="burger" onClick={ this.tap }>{ this.state.isOpen ? <ImCross/> : <GiHamburgerMenu/> }</span>
-                        </div>
-                        <div className={`bottom ${this.state.isOpen? '': 'none'}`}>
-                            <NavLink exact to="/" activeClassName="navbar__link--active" onClick={ this.close }>Accueil</NavLink>
-                            <NavLink to="/sponsors" activeClassName="navbar__link--active" onClick={ this.close }>Sponsors</NavLink>
-                            <NavLink to="/galerie" activeClassName="navbar__link--active" onClick={ this.close }>Galerie</NavLink>
-                            <NavLink to="/follow" activeClassName="navbar__link--active" onClick={ this.close }>Nous suivre</NavLink>
-                            <NavLink to="/contact" activeClassName="navbar__link--active" onClick={ this.close }>Contact</NavLink>
-                        </div>
+    return (
+    
+        <div> 
+            <div className="hide-mobile">
+                <div className="navbar">
+                    <div className="links">
+                        <ul>
+                            <li><NavLink to="/" className={(navData) => navData.isActive ? "navbar__link--active" : "" }>Accueil</NavLink></li>
+                            <li><NavLink to="/sponsors" className={(navData) => navData.isActive ? "navbar__link--active" : "" }>Sponsors</NavLink></li>
+                            <li><NavLink to="/galerie" className={(navData) => navData.isActive ? "navbar__link--active" : "" }>Galerie</NavLink></li>
+                            <li><NavLink to="/follow" className={(navData) => navData.isActive ? "navbar__link--active" : "" }>Nous suivre</NavLink></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        )
-    }
+            <div className="hide-desktop">
+                <div className="navbar-mobile">
+                    <div className="top">
+                        <span className="burger"><NavLink exact to="/" className={(navData) => navData.isActive ? "navbar__link--active" : "" } onClick={close}>Raid 44L</NavLink></span>
+                        <span className="burger" onClick={tap}>{ isOpen ? <ImCross/> : <GiHamburgerMenu/> }</span>
+                    </div>
+                    <div className={`bottom ${isOpen? '': 'none'}`}>
+                        <NavLink to="/" className={(navData) => navData.isActive ? "navbar__link--active" : "" } onClick={ close }>Accueil</NavLink>
+                        <NavLink to="/sponsors" className={(navData) => navData.isActive ? "navbar__link--active" : "" } onClick={ close }>Sponsors</NavLink>
+                        <NavLink to="/galerie" className={(navData) => navData.isActive ? "navbar__link--active" : "" } onClick={ close }>Galerie</NavLink>
+                        <NavLink to="/follow" className={(navData) => navData.isActive ? "navbar__link--active" : "" } onClick={ close }>Nous suivre</NavLink>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+    
 }
