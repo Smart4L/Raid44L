@@ -27,7 +27,7 @@ ChartJS.register(
 const zoomOptions = {
     pan: {
       enabled: true,
-      mode: 'xy',
+      mode: 'x',
     },
     zoom: {
         wheel: {
@@ -39,7 +39,7 @@ const zoomOptions = {
         drag: {
             enabled: false
         },
-        mode: 'xy',
+        mode: 'x',
     },
   };
 
@@ -52,13 +52,13 @@ const tempsOptions = {
         },
         title: {
             display: true,
-            text: 'Température extérieure',
+            text: 'Température ambiante',
         }
     },
     scales: {
         y: {
-            min: 0,
-            max: 50
+            min: -10,
+            max: 60
         }
     }
 };
@@ -66,6 +66,7 @@ const tempsOptions = {
 const engineOptions = {
     responsive: false,
     plugins: {
+        zoom: zoomOptions,
         legend: {
         position: 'top',
         },
@@ -77,7 +78,7 @@ const engineOptions = {
     scales: {
         y: {
             min: 0,
-            max: 100
+            max: 110
         }
     }
 }
@@ -93,6 +94,12 @@ export const Follow = () => {
     const [tempsGraph, setTempsGraph] = useState({
         labels: Array(1).fill(0),
         datasets: [
+            {
+                label: 'Température Intérieure',
+                data: [0, 10, 5],
+                borderColor: 'rgb(173, 209, 158)',
+                backgroundColor: 'rgba(173, 209, 158, 0.5)',
+            },
             {
                 label: 'Température Extérieure',
                 data: [0, 10, 5],
@@ -120,16 +127,20 @@ export const Follow = () => {
         ]
     })
 
-    const updateTempsGraph = (datas) => {
-        let newLabels = datas.map(el => moment(el.date).format('LLL'))
-        let newData = datas.map(el => el.value.temperature)
-        console.log(datas)
+    const updateTempsGraph = (int, ext) => {
+        let newLabels = int.map(el => moment(el.date).format('D/MM/YYYY HH:MM'))
         let newTempsData = {
             labels: newLabels,
             datasets: [
                 {
+                    label: 'Température Intérieure',
+                    data: int.map(el => el.value.temperature - 10),
+                    borderColor: 'rgb(173, 209, 158)',
+                    backgroundColor: 'rgba(173, 209, 158, 0.5)',
+                },
+                {
                     label: 'Température Extérieure',
-                    data: newData,
+                    data: ext.map(el => el.value.temperature),
                     borderColor: 'rgb(255, 99, 132)',
                     backgroundColor: 'rgba(255, 99, 132, 0.5)',
                 }
@@ -140,7 +151,7 @@ export const Follow = () => {
     
     const updateEngineGraph = (water, oil) => {
         let newTempsData = {
-            labels: oil.map(el => moment(el.createdAt).format('LLL')),
+            labels: water.map(el => moment(el.createdAt).format('D/MM/YYYY HH:MM')),
             datasets: [
                 {
                     label: 'Température huile',
@@ -161,24 +172,35 @@ export const Follow = () => {
 
     const fetchDatas = async() => {
         try {
-            await axios.get('https://4lapi.methaverse.fr/api/smart4ls', { headers: {"Authorization" : `Bearer ${env.API_TOKEN}`}})
-            .then(response =>{
-                let DHT11_25 = response.data.filter(el => el.name == "DHT11_25")
-                let temps = DHT11_25.map(el => {el.value = JSON.parse(el.value); return el})
-                console.log(temps)
-                let DS18B20_28_water = response.data.filter(el => el.name == "DS18B20_28-01193a2abb07")
-                let water = DS18B20_28_water.map(el => {el.value = JSON.parse(el.value); return el})
-                let DS18B20_28_oil = response.data.filter(el => el.name == "DS18B20_28-01193a459cac")
-                let oil = DS18B20_28_oil.map(el => {el.value = JSON.parse(el.value); return el})
-                
-                let SIM7600G_H_GPS = response.data.filter(el => el.name == "SIM7600G_H_GPS")
-                let gps  = SIM7600G_H_GPS.map(el => JSON.parse(el.value))
-                let carPath  = gps.map(el => {return { lat: el.latitude, lng: el.longitude } })
+            let past = moment().subtract(2, 'days')
+            let future = moment().add(1, 'days')
 
-                updateTempsGraph(temps)
-                updateEngineGraph(water, oil)
-                setLastUpdate(moment(water.at(-1).createdAt))
-                mapRef.current.addCarPosition(carPath)
+            await axios.get(`https://ycqc4785.directus.app/items/smart4l?filter={"createdAt": {"_between": ["${past.format('YYYY-MM-DD')}", "${future.format('YYYY-MM-DD')}"]}}&sort=createdAt&limit=-1`)
+            .then(response =>{
+                let APIdata = response.data.data
+                let DHT11_25 = APIdata.filter(el => el.name == "DHT11_25")
+
+                let DS18B20_28_ext = APIdata.filter(el => el.name == "DS18B20_BLACK")
+
+                let DS18B20_28_water = APIdata.filter(el => el.name == "DS18B20_BLUE")
+
+                let DS18B20_28_oil = APIdata.filter(el => el.name == "DS18B20_RED")
+                
+                let SIM7600G_H_GPS = APIdata.filter(el => el.name == "SIM7600G_H_GPS")
+                let carPath  = SIM7600G_H_GPS.map(el => {return { lat: el.value.latitude, lng: el.value.longitude } })
+
+                if(DHT11_25.length !=0 && DS18B20_28_ext.length !=0){
+                    updateTempsGraph(DHT11_25, DS18B20_28_ext)
+                }
+                
+                if(DS18B20_28_water.length !=0 && DS18B20_28_oil.length !=0){
+                    updateEngineGraph(DS18B20_28_water, DS18B20_28_oil)
+                    setLastUpdate(moment(DS18B20_28_water.at(-1).createdAt))
+                }
+
+                if(carPath.length != 0){
+                    mapRef.current.addCarPosition(carPath)
+                }
             });
         }
         catch (error) {
