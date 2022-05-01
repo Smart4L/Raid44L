@@ -134,7 +134,7 @@ export const Follow = () => {
             datasets: [
                 {
                     label: 'Température Intérieure',
-                    data: int.map(el => el.value.temperature - 10),
+                    data: int.map(el => el.value.temperature),
                     borderColor: 'rgb(173, 209, 158)',
                     backgroundColor: 'rgba(173, 209, 158, 0.5)',
                 },
@@ -180,11 +180,11 @@ export const Follow = () => {
                 let APIdata = response.data.data
                 let DHT11_25 = APIdata.filter(el => el.name == "DHT11_25")
 
-                let DS18B20_28_ext = APIdata.filter(el => el.name == "DS18B20_BLACK")
+                let DS18B20_28_ext = APIdata.filter(el => el.name == "DS18B20_RED")
 
-                let DS18B20_28_water = APIdata.filter(el => el.name == "DS18B20_BLUE")
+                let DS18B20_28_water = APIdata.filter(el => el.name == "DS18B20_BLACK")
 
-                let DS18B20_28_oil = APIdata.filter(el => el.name == "DS18B20_RED")
+                let DS18B20_28_oil = APIdata.filter(el => el.name == "DS18B20_BLUE")
                 
                 let SIM7600G_H_GPS = APIdata.filter(el => el.name == "SIM7600G_H_GPS")
                 let carPath  = SIM7600G_H_GPS.map(el => {return { lat: el.value.latitude, lng: el.value.longitude } })
